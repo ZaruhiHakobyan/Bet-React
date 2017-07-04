@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>AddressBook</title>
+
+        <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="style.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript" src="script.js"></script>
+    </head>
+    <body>
+        <div class="content">
+            <div class="addr_book_title">
+                This is an AddressBook!
+            </div>
+            <div class="buttons_inputs clean">
+                <div class="for_add">
+                    <div>Add a new contact.</div>
+                    <input type="text" placeholder="Enter first name" class="add_fName_inp inp"/>
+                    <input type="text" placeholder="Enter last name" class="add_lName_inp inp"/>
+                    <input type="number" placeholder="Enter phone number" class="add_pNumber_inp inp"/>
+                    <div class="add_btn btn">Add</div>
+                </div>
+                <div class="for_search">
+                    <div>Search for a contact.</div>
+                    <input type="text" class="search_inp inp"/>
+                    <div class="search_btn btn">Search</div>
+                </div>
+            </div>
+            <div class="contact_list clean">
+                <div class="contacts_list_title">Here is the list of contacts.</div>
+                <div class="show_all_btn btn">Show all contacts</div>
+                <ul class="contact_list_ul"></ul>
+            </div>
+        </div>
+    </body>
+</html>

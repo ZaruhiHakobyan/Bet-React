@@ -1,0 +1,71 @@
+@fa-font-path: "font-awesome/fonts";
+
+.content{
+    margin: auto;
+    padding: 30px 20px;
+    width: 700px;
+}
+.clean:after{
+    content:"";
+    display:block;
+    clear:both;
+}
+.addr_book_title{
+    text-align: center;
+    font-size: 21px;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+.for_add, .for_search{
+    width: 50%;
+    box-sizing: border-box;
+    float: left;
+    padding: 10px;
+}
+.btn{
+    text-align: center;
+    border: 1px solid #1d7320;
+    padding: 7px;
+    margin: 15px 0;
+    border-radius: 10px;
+    width: 150px;
+    background: #4CAF50;
+    color: white;
+    cursor:pointer;
+    outline: none;
+}
+.btn.search_btn{
+    border: 1px solid #096c8c;
+    background: #008CBA;
+}
+.inp{
+    width: 200px;
+    border-radius: 5px;
+    border: 1px solid grey;
+    padding: 5px;
+    margin-top: 15px;
+    outline: none;
+}
+.delete_btn{
+    display: inline-block;
+    cursor: pointer;
+}
+.bigSpace_div{
+    width: 25px;
+    display: inline-block;
+}
+
+.contact_list_ul{
+    list-style: none;
+}
+.contact_list_ul li{
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+.contact_list_ul li span{
+    width: 160px;
+    display:inline-block;
+}
+.contact_list_ul li span:nth-of-type(2){
+    width: 200px;
+}
