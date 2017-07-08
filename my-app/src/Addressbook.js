@@ -24,7 +24,7 @@ class Addressbook extends Component {
     onAdd (){
         let name = this.refs.contact_name.value;
         this.refs.contact_name.value = '';
-        let contact = {name:name};
+        let contact = new Contact(name);
         this.props.contacts.push(contact);
         this.setState({
             contacts: this.props.contacts
