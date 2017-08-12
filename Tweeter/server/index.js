@@ -31,7 +31,7 @@ server.on('connection', function (socket) {
   socket.on('close', function () {})
   socket.on('error', function (err) {})
 
-  var stream = client.stream('statuses/filter', {track: 'dance'});
+  var stream = client.stream('statuses/filter', {track: 'football'});
 
   stream.on('data', function(event) {
 	  fs.writeFile("json.txt", JSON.stringify(event,null, 4), function(err) {
@@ -43,7 +43,7 @@ server.on('connection', function (socket) {
       console.log(event && event.text);
   });
 
-  
+
   stream.on('error', function(error) {
     throw error;
   });

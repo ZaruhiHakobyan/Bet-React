@@ -1,83 +1,132 @@
 import React, { Component } from 'react';
+// import wikipedia  from 'wikipedia-js';
 import WebSocket from 'react-websocket';
-import { withGoogleMap, GoogleMap, Marker } from "react-google-maps";
+import wiki from 'wikijs';
+// import { withGoogleMap, GoogleMap, Marker } from "react-google-maps";
 
 class Tweets extends Component {
     constructor(props) {
         super(props);
         this.state = {
             twitArray: [],
-            wikiData: {}
+            dances: [],
+            wikiData: {},
+            filterIncluding: [false, true]
         }
     }
 
 
-    // getLocationCoord () {
-    //     var geocoder =  new window.google.maps.Geocoder();
-    //     geocoder.geocode( { 'address': 'Yerevan'}, function(results, status) {
-    //         if (status == window.google.maps.GeocoderStatus.OK) {
-    //             alert("location : " + results[0].geometry.location.lat() + " " +results[0].geometry.location.lng());
-    //             return {
-    //                 lat: results[0].geometry.location.lat(),
-    //                 lng: results[0].geometry.location.lng()
-    //                 };
-    //         } else {
-    //             alert("Something got wrong " + status);
-    //         }
-    //     });
-    // }
-
     handleData(data) {
-        // console.log(window.google.maps);
         let newData = JSON.parse(data);
-        // var city = data.user.time_zone;
-        // var coord =  this.getLocationCoord(city);
-        this.state.twitArray.push(newData);
+        let inputValue = this.state.inpVal;
+        if (!!newData.user.location && newData.user.location.indexOf(inputValue) >= 0) {
+            this.state.twitArray.push(newData);
+        }
+        if(this.state.filterIncluding[0]){
+            if(this.state.filterIncluding[1]){
+                if (!!newData.user.location && newData.user.location.indexOf(inputValue) >= 0) {
+                    this.state.twitArray.push(newData);
+                }
+            }else{
+                if (!!newData.user.location && newData.user.location.indexOf(inputValue) < 0) {
+                    this.state.twitArray.push(newData);
+                }
+            }
+        }else{
+            this.state.twitArray.push(newData);
+        }
         this.setState({
             twitArray: this.state.twitArray.slice()
         });
     }
-    // componentWillMount(){
-    //     // var coord = this.getLocationCoord();
-    //     // window.$.ajax({ url:'http://maps.googleapis.com/maps/api/geocode/json?latlng='+coord.lat+','+coord.lng+'&sensor=true',
-    //     //     success: function(data){
-    //     //         var state = data.results[0].address_components[5].long_name;
-    //     //         var country = data.results[0].address_components[6].long_name;
-    //     //         var zip = data.results[0].address_components[7].long_name;
-    //     //         window.$('.leaflet-popup-content').text(state+' '+country+' '+zip);
-    //     //         console.log(data.results[0]);
-    //     //     }
-    //     // });
-    // }
+
+    getInputValue (e) {
+        this.setState({ inpVal: e.target.value });
+    }
+
+    filterIncluding () {
+        this.setState({
+            filterIncluding: [true, true]
+        });
+    }
+
+    filterExcluding () {
+        this.setState({
+            filterIncluding: [true, false]
+        });
+    }
+
+    dropFilter () {
+        this.setState({
+            filterIncluding: [false, false]
+        });
+    }
+
     componentWillMount() {
-        // fetch('http://www.wikiwand.com/en/List_of_national_dances')
-        //     .then(response => response.json())
-        //     .then(response => {
-        //         // this.state.list.push(response);
-        //         // this.state.x + 10;
-        //         // this.setState({
-        //         //     list: this.state.list.slice(),
-        //         //     x: this.state.x + 10
-        //         // });
-        //         alert(response);
-        //     })
-        fetch('https://randomuser.me/api/?results=10')
-            .then(response => response.json())
-            .then(response => {
-                this.setState({
-                    wikiData: response.results
+        var that = this;
+        wiki().page('List_of_national_dances')
+            .then(page => {
+                var links = page.html();
+                links.then(function(stories) {
+                    var div = document.createElement("div");
+                    div.innerHTML = stories;
+                    var data = div.querySelector("table.wikitable");
+                    var allTr = data.querySelectorAll("tr");
+                    allTr = Array.prototype.slice.call(allTr, 1);
+                    var list = allTr.map(function(tr){
+                        // debugger;
+                        var key = tr.children[0].innerText.trim();
+                        var obj = {};
+                        var refs = tr.children[1].querySelectorAll('a');
+                        var danceList = [];
+                        if(refs.length) {
+                            Array.prototype.reduce.call(refs, function(b, a){
+                                var href = (a && a.href) || '';
+                                var indexOfWiki = href.indexOf("/wiki/");
+                                if(indexOfWiki >= 0) {
+                                    danceList.push(href.substr(indexOfWiki + 6));
+                                }
+                            }, refs[0]);
+                        }
+                        obj[key] = danceList;
+                        return obj;
+                    })
+                    that.setState({
+                        dances: list
+                    });
                 });
             })
+        this.setState({
+            twitArray: this.state.twitArray.slice()
+        });
+
     }
+
+
+
     render() {
-        console.log(this.state.wikiData);
         return (
             <div>
                 Count: <strong>{this.state.twitArray.length}</strong>
-
+                <div className='filterDiv clean'>
+                    <input className='inputttt' type='text' placeholder='enter a location' onChange={this.getInputValue.bind(this)}/>
+                    <div className='filter_include_btn' onClick={this.filterIncluding.bind(this)}>Filter including</div>
+                    <div className='filter_exclude_btn' onClick={this.filterExcluding.bind(this)}>Filter excluding</div>
+                    <div className='filter_drop_btn' onClick={this.dropFilter.bind(this)}>Drop filter</div>
+                </div>
                 <WebSocket url='ws://localhost:3070'
                            onMessage={this.handleData.bind(this)}/>
                 {this.state.twitArray.map(element => {
+                    // console.log(element.user.name + ' ____ ' + element.user.location + ' ____ ', this.state.inpVal);
+                    {this.state.dances.forEach(function(el){
+                        if(el[element.user.location]){
+                            console.log('%%%%');
+                            console.log(el[element.user.location]);
+                        };
+
+                    })
+
+                    }
                     return (
                         <div className="user">
                             <div className="userInfo">

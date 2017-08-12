@@ -1,49 +1,52 @@
 {
-    "created_at": "Fri Aug 04 11:00:53 +0000 2017",
-    "id": 893426510954205200,
-    "id_str": "893426510954205184",
-    "text": "Govinda And Wife Dance To Kisi Disco Mein. Raveena, You Weren't Missed https://t.co/z4Fg7rGMnx",
-    "source": "<a href=\"https://socialscud.com\" rel=\"nofollow\">RSSFlare by SocialScud</a>",
-    "truncated": false,
+    "created_at": "Sat Aug 12 04:34:16 +0000 2017",
+    "id": 896228315064750100,
+    "id_str": "896228315064750080",
+    "text": "#Football #Buzz 2017 PRESTIGE ELI MANNING/ODELL BECKHAM JR DUAL JERSEY CONNECTIONS GIANTS https://t.co/ZL83FLp7kv… https://t.co/ll7hTOB00z",
+    "display_text_range": [
+        0,
+        140
+    ],
+    "source": "<a href=\"https://dlvrit.com/\" rel=\"nofollow\">dlvr.it</a>",
+    "truncated": true,
     "in_reply_to_status_id": null,
     "in_reply_to_status_id_str": null,
     "in_reply_to_user_id": null,
     "in_reply_to_user_id_str": null,
     "in_reply_to_screen_name": null,
     "user": {
-        "id": 134224940,
-        "id_str": "134224940",
-        "name": "ANIRBAN BARAL",
-        "screen_name": "SuperDuperAbir",
-        "location": "Mumbai",
-        "url": "http://www.facebook.com/guriabir",
-        "description": "A son, a brother, a grand-son, a nephew, a cousin, a friend, a lover, a partner, a young boy, and a grown man too!",
+        "id": 559741538,
+        "id_str": "559741538",
+        "name": "Eli Manning Fans",
+        "screen_name": "EliManning_Fans",
+        "location": null,
+        "url": null,
+        "description": "The latest #NFL #Colorado Eli Manning related #Daily #Deals #online #discount #bargain #Bargains #Bestseller #Onsale #Sale #Good #Price #JustForToday #BuyNow",
         "protected": false,
         "verified": false,
-        "followers_count": 10897,
-        "friends_count": 1246,
-        "listed_count": 26,
-        "favourites_count": 224,
-        "statuses_count": 107815,
-        "created_at": "Sat Apr 17 20:19:09 +0000 2010",
-        "utc_offset": 19800,
-        "time_zone": "Kolkata",
+        "followers_count": 7653,
+        "friends_count": 1649,
+        "listed_count": 205,
+        "favourites_count": 0,
+        "statuses_count": 390666,
+        "created_at": "Sat Apr 21 17:41:52 +0000 2012",
+        "utc_offset": -25200,
+        "time_zone": "Pacific Time (US & Canada)",
         "geo_enabled": false,
         "lang": "en",
         "contributors_enabled": false,
         "is_translator": false,
-        "profile_background_color": "FFF04D",
-        "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/378800000112020071/c9f3c5c200110bc0ac1717a0ddd8faea.jpeg",
-        "profile_background_image_url_https": "https://pbs.twimg.com/profile_background_images/378800000112020071/c9f3c5c200110bc0ac1717a0ddd8faea.jpeg",
+        "profile_background_color": "022330",
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme15/bg.png",
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme15/bg.png",
         "profile_background_tile": false,
-        "profile_link_color": "0099CC",
-        "profile_sidebar_border_color": "FFFFFF",
-        "profile_sidebar_fill_color": "E3E2DE",
-        "profile_text_color": "634047",
+        "profile_link_color": "0084B4",
+        "profile_sidebar_border_color": "A8C7F7",
+        "profile_sidebar_fill_color": "C0DFEC",
+        "profile_text_color": "333333",
         "profile_use_background_image": true,
-        "profile_image_url": "http://pbs.twimg.com/profile_images/816906638275710978/QnRz8fiM_normal.jpg",
-        "profile_image_url_https": "https://pbs.twimg.com/profile_images/816906638275710978/QnRz8fiM_normal.jpg",
-        "profile_banner_url": "https://pbs.twimg.com/profile_banners/134224940/1383918693",
+        "profile_image_url": "http://pbs.twimg.com/profile_images/2153922337/imagesem_normal.jpg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/2153922337/imagesem_normal.jpg",
         "default_profile": false,
         "default_profile_image": false,
         "following": null,
@@ -55,18 +58,172 @@
     "place": null,
     "contributors": null,
     "is_quote_status": false,
+    "extended_tweet": {
+        "full_text": "#Football #Buzz 2017 PRESTIGE ELI MANNING/ODELL BECKHAM JR DUAL JERSEY CONNECTIONS GIANTS https://t.co/ZL83FLp7kv #EliManning #Sports https://t.co/sHRex5jBzZ",
+        "display_text_range": [
+            0,
+            133
+        ],
+        "entities": {
+            "hashtags": [
+                {
+                    "text": "Football",
+                    "indices": [
+                        0,
+                        9
+                    ]
+                },
+                {
+                    "text": "Buzz",
+                    "indices": [
+                        10,
+                        15
+                    ]
+                },
+                {
+                    "text": "EliManning",
+                    "indices": [
+                        114,
+                        125
+                    ]
+                },
+                {
+                    "text": "Sports",
+                    "indices": [
+                        126,
+                        133
+                    ]
+                }
+            ],
+            "urls": [
+                {
+                    "url": "https://t.co/ZL83FLp7kv",
+                    "expanded_url": "http://dlvr.it/PdW2PJ",
+                    "display_url": "dlvr.it/PdW2PJ",
+                    "indices": [
+                        90,
+                        113
+                    ]
+                }
+            ],
+            "user_mentions": [],
+            "symbols": [],
+            "media": [
+                {
+                    "id": 896228311612903400,
+                    "id_str": "896228311612903424",
+                    "indices": [
+                        134,
+                        157
+                    ],
+                    "media_url": "http://pbs.twimg.com/media/DHAK5qdV0AA-nz_.jpg",
+                    "media_url_https": "https://pbs.twimg.com/media/DHAK5qdV0AA-nz_.jpg",
+                    "url": "https://t.co/sHRex5jBzZ",
+                    "display_url": "pic.twitter.com/sHRex5jBzZ",
+                    "expanded_url": "https://twitter.com/EliManning_Fans/status/896228315064750080/photo/1",
+                    "type": "photo",
+                    "sizes": {
+                        "medium": {
+                            "w": 347,
+                            "h": 400,
+                            "resize": "fit"
+                        },
+                        "small": {
+                            "w": 347,
+                            "h": 400,
+                            "resize": "fit"
+                        },
+                        "thumb": {
+                            "w": 150,
+                            "h": 150,
+                            "resize": "crop"
+                        },
+                        "large": {
+                            "w": 347,
+                            "h": 400,
+                            "resize": "fit"
+                        }
+                    }
+                }
+            ]
+        },
+        "extended_entities": {
+            "media": [
+                {
+                    "id": 896228311612903400,
+                    "id_str": "896228311612903424",
+                    "indices": [
+                        134,
+                        157
+                    ],
+                    "media_url": "http://pbs.twimg.com/media/DHAK5qdV0AA-nz_.jpg",
+                    "media_url_https": "https://pbs.twimg.com/media/DHAK5qdV0AA-nz_.jpg",
+                    "url": "https://t.co/sHRex5jBzZ",
+                    "display_url": "pic.twitter.com/sHRex5jBzZ",
+                    "expanded_url": "https://twitter.com/EliManning_Fans/status/896228315064750080/photo/1",
+                    "type": "photo",
+                    "sizes": {
+                        "medium": {
+                            "w": 347,
+                            "h": 400,
+                            "resize": "fit"
+                        },
+                        "small": {
+                            "w": 347,
+                            "h": 400,
+                            "resize": "fit"
+                        },
+                        "thumb": {
+                            "w": 150,
+                            "h": 150,
+                            "resize": "crop"
+                        },
+                        "large": {
+                            "w": 347,
+                            "h": 400,
+                            "resize": "fit"
+                        }
+                    }
+                }
+            ]
+        }
+    },
     "retweet_count": 0,
     "favorite_count": 0,
     "entities": {
-        "hashtags": [],
+        "hashtags": [
+            {
+                "text": "Football",
+                "indices": [
+                    0,
+                    9
+                ]
+            },
+            {
+                "text": "Buzz",
+                "indices": [
+                    10,
+                    15
+                ]
+            }
+        ],
         "urls": [
             {
-                "url": "https://t.co/z4Fg7rGMnx",
-                "expanded_url": "https://socialscud.com/598453dc9f9d5142840689fe/govinda-and-wife-dance-to-kisi-disco-mein-raveena-you-werent-missed",
-                "display_url": "socialscud.com/598453dc9f9d51…",
+                "url": "https://t.co/ZL83FLp7kv",
+                "expanded_url": "http://dlvr.it/PdW2PJ",
+                "display_url": "dlvr.it/PdW2PJ",
                 "indices": [
-                    71,
-                    94
+                    90,
+                    113
+                ]
+            },
+            {
+                "url": "https://t.co/ll7hTOB00z",
+                "expanded_url": "https://twitter.com/i/web/status/896228315064750080",
+                "display_url": "twitter.com/i/web/status/8…",
+                "indices": [
+                    115,
+                    138
                 ]
             }
         ],
@@ -78,5 +235,5 @@
     "possibly_sensitive": false,
     "filter_level": "low",
     "lang": "en",
-    "timestamp_ms": "1501844453930"
+    "timestamp_ms": "1502512456085"
 }
